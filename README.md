@@ -10,4 +10,17 @@ br
 br
 * [Autoprefixer] - Esencial en la compilación de los estilos para el soporte de los prefijos de todos los navegadores.
 br
-* [imagemin] - minificador de imagenes
+* [imagemin] - Minificador de imagenes
+br
+* [uglify] -
+br
+* [babel] -
+br
+* [pug] -
+br
+* [BrowserSync] -
+
+*** Running
+```shell
+$ gulp watch
+```
