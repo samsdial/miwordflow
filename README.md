@@ -7,3 +7,7 @@ br
 * [Sass] - Extención minificación de css como preprocesador
 br
 * [sourcemaps] - Maping como herramienta de rastreo luego de la compilación tanto de las hojas de estilo css, al igual que todos los archivos javascript.
+br
+* [Autoprefixer] - Esencial en la compilación de los estilos para el soporte de los prefijos de todos los navegadores.
+br
+* [imagemin] - minificador de imagenes
