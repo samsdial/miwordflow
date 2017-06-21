@@ -1,3 +1,3 @@
 ﻿# miwordflow
 
-Hi samsdial Word Flow stage proyects
+Hi samsdial Word Flow stage proyects, all
