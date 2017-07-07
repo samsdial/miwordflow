@@ -20,6 +20,12 @@ br
 br
 * [BrowserSync] -
 
+
+*** Install
+```shell
+$ npm install
+```
+
 *** Running
 ```shell
 $ gulp watch
