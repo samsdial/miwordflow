@@ -1,6 +1,22 @@
 extends ./base/layout.pug
 
 block content
-    .eco
-        h1 hola mundo
-        a(href="#") Link
+    //- main
+    //-     a.izquierda(href="#") <
+    //-     a.derecha(href="#") >
+    //-     ul.list
+    //-         li.bgi_banner
+    //-             img(src="http://lorempicsum.com/simpsons/1920/650/1", alt="prueba")
+    //-         li.bgi_banner
+    //-             img(src="http://lorempicsum.com/simpsons/1920/650/2", alt="prueba")
+    //-         li.bgi_banner
+    //-             img(src="http://lorempicsum.com/simpsons/1920/650/6", alt="prueba")
+    //- .acordeon
+    //-     section.panel
+    //-         - for (var x = 0; x < 5; x++)
+    //-             .panel_head
+    //-                 h2 Panel 1
+    //-             .panel_content
+    //-                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis officia unde quod recusandae fugit, nam impedit facilis, eum id quaerat, iste maiores! Tempora architecto excepturi cupiditate veritatis soluta omnis, quis.
+    main
+        p Lorem ipsum dolor sit amet, <a href="#" data-bg="red" title="MiToolTip">consectetur adipisicing elit.</a> Necessitatibus rerum voluptas saepe in cum autem mollitia eos beatae minima itaque fugit, odio, ut expedita repellat nemo asperiores <a href="#" data-bg="gray" title="MiToolTip">consectetur adipisicing elit.</a>!

@@ -1,37 +1,30 @@
-// test = () => alert("no mas Porro");
-// Clases predefinidas del lenguaje
-// var ahora = new Date();
-// console.log('Año:'+ahora.getFullYear());
-// Objetos Literales Js
-// var generico = {
-//     nombre: 'Mi objeto',
-//     edad: 15,
-//     saludar: function(nombre){
-//         console.log('Hola '+nombre);
-//     }
-// };
-// console.log(generico.nombre);
-// generico.saludar ('Marcos');
-// Clases de Js Definidas por el Usuario
-// DOM en jascript
-// var elemento = document.querySelector('h1');
-// var timeout = setTimeout(function (){
-//     elemento.innerHTML = 'Hola desde Javascript';
-// }, 1000);
+$(document).ready(function(){
+    // hover para capturar el evento tooltip
+    $('a').hover(function (){
+        //hover IN
+        // Guardar el atributo title
+        var titulo = $(this).attr('title'),
+            fondo   = $(this).data('bg');
+        // guardamion el titulo en un attr data- y eliminamos el attr title
+        $(this).data('titulo', titulo).removeAttr('title');
+        // Añadir nuestro propio tooltip
+        $('<spam class="tooltip"></spam>').text(titulo).css('background-color', fondo).appendTo('body').fadeIn('slow');
+    }, function(){
+        //hover OUT
+        // Reponer el titulo nativo
+        $(this).attr('title', $(this).data('titulo'));
+        // eliminiamos nuestro tooltip
+        $('.tooltip').remove();
 
-// DOM en jQuery
-// var elemento = $('h1');
-// var timeout = setTimeout(function(){
-//     elemento.text('Hola desde Jquery');
-// }, 1000);
-/**
- * Escuchar elementos del DOM (content loader)
- */
-document.addEventListener('DOMContentLoaded', function(){
-    console.log('DOM Cargado');
-});
-
-var enlace = document.querySelector('a');
-enlace.addEventListener('click', function(event){
-    console.log('click');
+    }).mousemove(function(e){
+        // console.log('moviendo', e);
+        // Capturando la poscion del raton sobre el elemento a del tooltip
+        var ratonX = e.pageX + 20,
+            ratonY = e.pageY + 10;
+        // hacer que el elemento se mueva junto con el puentero
+        $('.tooltip').css({
+            top: ratonY,
+            left: ratonX
+        });
+    });
 });
