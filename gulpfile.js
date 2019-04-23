@@ -14,7 +14,7 @@ const   gulp            = require('gulp'),
 gulp.task('sass', function(){
 return gulp.src('src/sass/**/*.sass')
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(autoprefixer({
                 browsers: ['last 2 versions'],
                 cascade: false
@@ -26,7 +26,7 @@ return gulp.src('src/sass/**/*.sass')
 gulp.task('uncss', function(){
 return gulp.src('src/sass/**/*.sass')
         .pipe(sourcemaps.init())
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(uncss({
                 html: ['dist/index.html']
         }))
